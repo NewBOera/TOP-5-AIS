@@ -41,6 +41,15 @@
           rgba(110, 195, 253, 1) 100%
         );
       }
+
+      .success-gradient {
+        background: linear-gradient(
+          109.6deg,
+          rgb(0, 204, 130) 11.2%,
+          rgb(58, 181, 46) 91.7%
+        );
+      }
+
       .custom-bg {
         background-image: linear-gradient(
             to bottom,
@@ -95,8 +104,9 @@
         </div>
 
         <hr class="h-[25px] w-full gradient-button mb-2" />
+
         <button
-          class="text-blue-400 border font-medium text-xl cursor-pointer border-blue-400 rounded-full py-2 w-full mb-4 md:w-[15%] md:self-start"
+          class="text-blue-400 border cursor-auto font-bold text-xl w-full mb-4 md:w-[15%] md:self-start"
         >
           Blog
         </button>
@@ -555,15 +565,18 @@
               class="xl:hidden shadow-xl mb-4 border gap-3 flex flex-col text-center py-6 items-center justify-center"
             >
               <h3
+                id="form-title-2"
                 class="text-white gradient-button text-center text-xl p-4 w-full"
               >
-                ¿Te gusto este top 55?
+                ¿Te gustó este top 55?
               </h3>
 
-              <span class="text-xl font-medium"
+              <span id="form-subtitle-2" class="text-xl font-medium"
                 >No te pierdas las mejores recomendaciones.</span
               >
-              <span class="underline text-base">Es 100% gratis.</span>
+              <span id="cienp2" class="underline text-base"
+                >Es 100% gratis.</span
+              >
               <input
                 class="border p-2 w-full text-center text-lg"
                 type="email"
@@ -572,6 +585,7 @@
                 id="emailInput"
               />
               <button
+                id="btn-form2"
                 onclick="sendSubscribeForm('newsletterb')"
                 type="submit"
                 class="cursor-pointer w-[80%] gradient-button text-white text-xl py-2 rounded-full"
@@ -587,26 +601,30 @@
             <div class="hidden xl:block sticky top-[191px] w-[85%]">
               <form
                 id="newsletter2"
-                class="shadow-xl mb-4 border gap-3 pb-10 flex flex-col text-center items-center justify-center"
+                class="shadow-md mb-4 border gap-3 pb-10 flex flex-col text-center items-center justify-center"
               >
                 <h3
+                  id="form-title-1"
                   class="text-white gradient-button text-center text-xl p-4 w-full"
                 >
-                  ¿Te gusto este top 5?
+                  ¿Te gustó este top 5?
                 </h3>
 
-                <span class="text-xl font-medium"
+                <span id="form-subtitle" class="text-xl font-medium"
                   >No te pierdas las mejores recomendaciones.</span
                 >
-                <span class="underline text-base">Es 100% gratis.</span>
+                <span id="cienp" class="underline text-base"
+                  >Es 100% gratis.</span
+                >
                 <input
                   class="border p-2 w-full text-center text-lg"
                   type="text"
                   placeholder="alejandro.telles@ejemplo.com"
                   name="email"
-                  id="emailInput"
+                  id="emailInputT"
                 />
                 <button
+                  id="btn-form"
                   onclick="sendSubscribeForm('newsletter2')"
                   type="submit"
                   class="cursor-pointer w-[80%] gradient-button text-white text-xl py-2 rounded-full"
