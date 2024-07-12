@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="form_logic.js"></script>
+
+    <link rel="stylesheet" href="notify.css" />
+    <script defer src="scripts/form.js"></script>
+
+    <script defer src="scripts/dynamic-domain.js"></script>
+    <script defer src="scripts/modals.js"></script>
+    <script defer src="scripts/notify.js"></script>
+
+    <title>Document</title>
+    <style>
+      .modalbg {
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+      }
+      .gradient-button {
+        background: rgb(135, 7, 173);
+        background: linear-gradient(
+          90deg,
+          rgba(135, 7, 173, 1) 0%,
+          rgba(123, 99, 212, 1) 48%,
+          rgba(110, 195, 253, 1) 100%
+        );
+      }
+      .custom-bg {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(136, 2, 171, 0.8),
+            rgba(136, 2, 171, 0.8)
+          ),
+          url("/images/footer.jpg");
+        background-size: cover;
+        background-position: center;
+        /* color con transparencia */
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primarybg: "#184C99",
+              buttoncolor: "#4361EE",
+              footercolor: "#F0F0F0",
+            },
+            fontFamily: {
+              Inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Inter py-5 px-6">
+    <header class="flex justify-center">
+      <div
+        class="flex flex-col w-[300px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:[1280px] 2xl:w-[1400px] pt-10 gap-2 md:gap-3 justify-center items-center"
+      >
+        <div
+          class="flex flex-col xl:flex-row xl:justify-between items-center gap-4 w-full"
+        >
+          <span
+            class="font-bold text-xl lg:grow md:text-3xl xl:order-2 xl:text-4xl xl:text-center xl:w-[40%]"
+            >ANUNCIO PATROCINADO</span
+          >
+          <div
+            class="flex justify-center grow items-center md:self-start lg:self-center gap-2"
+          >
+            <img src="images/logo.png.png" class="w-9" alt="" />
+            <h1
+              class="dyn-name font-bold xl:grow text-lg md:text-2xl xl:w-[35%]"
+            ></h1>
+          </div>
+          <div class="xl:order-2 xl:w-[25%] lg:shrink"></div>
+        </div>
+
+        <hr class="h-[25px] w-full gradient-button mb-2" />
+        <button
+          class="text-blue-400 border font-medium text-xl cursor-pointer border-blue-400 rounded-full py-2 w-full mb-4 md:w-[15%] md:self-start"
+        >
+          Blog
+        </button>
+      </div>
+    </header>
+
+    <main class="">
+      <section id="home-section" class="flex justify-center">
+        <div
+          class="flex flex-col xl:flex-row w-[300px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:[1280px] 2xl:w-[1400px]"
+        >
+          <div class="xl:w-[70%]">
+            <article class="md:[&>div>h2]:text-4xl md:[&>div>img]:h-[290px]">
+              <!--Titulo subtitulo fecha-->
+              <div class="flex flex-col gap-0.5 md:gap-2">
+                <h2 class="text-xl font-bold">
+                  5 Aplicaciones de IA que no pueden faltar en tu negocio
+                </h2>
+                <h3 class="text-xl font-medium md:text-2xl">
+                  La número 4 te dejará boquiabierto
+                </h3>
+                <span class="text-sm md:text-base">09/07/2024</span>
+                <img
+                  src="images/278627feaf6a1983e2696d001a2adbf6.jpg"
+                  class="h-[130px] w-300px object-cover"
+                  alt=""
+                />
+                <hr class="h-[5px] gradient-button my-4" />
+              </div>
+              <!--1. Subtitulo p img btn-->
+              <div class="flex flex-col gap-3">
+                <div class="md:flex md:gap-4">
+                  <div class="md:w-[50%]">
+                    <h2 class="text-xl md:text-4xl lg:mb-3 font-bold mb-3">
+                      1. GetResponse
+                    </h2>
+                    <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                      Si lo que buscas es el mejor compañero para marketing por
+                      correo electrónico y automatización con ayuda de
+                      Inteligencia artificial. Puedes sacarle provecho al
+                      análisis que te ofrece esta aplicación para entender el
+                      comportamiento del cliente, el rendimiento de tus campañas
+                      y la segmentación de audiencias. Cuando puedes analizar
+                      datos como tasas de apertura, tasas de clics y patrones de
+                      tu comunicación con tus clientes le das a tu marca/negocio
+                      un recurso muy valioso cuando se trata de ofrecer la mejor
+                      experiencia posible a tus clientes.
+                    </p>
+                  </div>
+                  <div
+                    class="md:w-[50%] md:h-[350px] bg-red-200 flex justify-center"
+                  >
+                    <img
+                      src="images/16bd2651fcfc5f4c7fc13e90f36de1f2.jpg"
+                      class="h-[200px] hidden md:block lg:h-100 w-full md:h-auto object-cover"
+                      alt=""
+                    />
+
+                    <img
+                      src="images/crop/mail.png"
+                      class="h-[120px] w-full md:hidden object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                  Sus herramientas de automatización impulsadas por simplifican
+                  el flujo de trabajo al ayudarte a automatizar tareas como la
+                  programación de correos electrónicos, la segmentación de
+                  listas y el seguimiento personalizado basado en las acciones
+                  de los usuarios. Esto no solo te ahorra tiempo, sino que
+                  también garantiza que tu negocio entregue mensajes oportunos y
+                  relevantes a su audiencia. En resumen, GetResponse pone en tus
+                  manos la posibilidad de mejorar el compromiso con los
+                  clientes, aumentar la eficiencia en las operaciones de
+                  marketing e impulsar el crecimiento de ingresos mediante el
+                  uso inteligente de la IA.
+                </p>
+                <ul
+                  class="text-xs list-disc list-inside px-4 md:leading-6 md:text-base lg:text-lg"
+                >
+                  <li class="list-disc">
+                    Análisis impulsado por IA para obtener profundos
+                    conocimientos del comportamiento del cliente
+                  </li>
+                  <li>
+                    Programación automatizada de correos electrónicos y
+                    segmentación
+                  </li>
+                  <li>
+                    Seguimiento personalizado basado en acciones de usuario
+                  </li>
+                  <li>
+                    Optimización de estrategias de marketing por correo
+                    electrónico
+                  </li>
+                  <li>
+                    Mejora del ROI a través de la automatización eficiente
+                  </li>
+                  <li>Precios: Los planes comienzan desde 281 MXN al mes</li>
+                </ul>
+
+                <div class="flex justify-center">
+                  <button
+                    class="cursor-pointer w-[90%] md:w-[30%] gradient-button text-white text-xl py-2 rounded-full"
+                  >
+                    <a
+                      href="https://www.getresponse.com?a=T7xFWKxyKr"
+                      target="_blank"
+                      >Saber más</a
+                    >
+                  </button>
+                </div>
+
+                <hr
+                  class="h-1 md:w-[80%] md:m-auto md:mb-4 bg-[#E5E5E5] mb-4"
+                />
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <div class="md:flex md:gap-4">
+                  <div class="md:w-[50%]">
+                    <h2 class="text-xl md:text-4xl lg:mb-3 font-bold mb-3">
+                      2. ZebraCat
+                    </h2>
+                    <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                      Esta herramienta no puede faltar si buscas crecer en redes
+                      sociales, con sus características de creación y
+                      programación de contenido impulsadas por Inteligencia
+                      Artificial. Las empresas pueden beneficiarse de sus
+                      algoritmos que analizan tendencias en redes sociales,
+                      preferencias de audiencia y métricas de rendimiento para
+                      optimizar tu estrategia de contenido.
+                    </p>
+                  </div>
+                  <div class="md:w-[50%] md:h-[250px] flex justify-center">
+                    <img
+                      src="images/cat.jpg"
+                      class="h-[200px] hidden md:block lg:h-100 w-full md:h-auto object-right-top object-cover"
+                      alt=""
+                    />
+
+                    <img
+                      src="images/crop/cat.png"
+                      class="h-[120px] w-full md:hidden object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                  Sus herramientas de automatización impulsadas por simplifican
+                  el flujo de trabajo al ayudarte a automatizar tareas como la
+                  programación de correos electrónicos, la segmentación de
+                  listas y el seguimiento personalizado basado en las acciones
+                  de los usuarios. Esto no solo te ahorra tiempo, sino que
+                  también garantiza que tu negocio entregue mensajes oportunos y
+                  relevantes a su audiencia. En resumen, GetResponse pone en tus
+                  manos la posibilidad de mejorar el compromiso con los
+                  clientes, aumentar la eficiencia en las operaciones de
+                  marketing e impulsar el crecimiento de ingresos mediante el
+                  uso inteligente de la IA.
+                </p>
+                <ul
+                  class="text-xs list-disc list-inside px-4 md:leading-6 md:text-base lg:text-lg"
+                >
+                  <li class="list-disc">
+                    Análisis impulsado por IA para obtener profundos
+                    conocimientos del comportamiento del cliente
+                  </li>
+                  <li>
+                    Programación automatizada de correos electrónicos y
+                    segmentación
+                  </li>
+                  <li>
+                    Seguimiento personalizado basado en acciones de usuario
+                  </li>
+                  <li>
+                    Optimización de estrategias de marketing por correo
+                    electrónico
+                  </li>
+                  <li>
+                    Mejora del ROI a través de la automatización eficiente
+                  </li>
+                  <li>Precios: Los planes comienzan desde 281 MXN al mes</li>
+                </ul>
+
+                <div class="flex justify-center">
+                  <button
+                    class="cursor-pointer w-[90%] md:w-[30%] gradient-button text-white text-xl py-2 rounded-full"
+                  >
+                    <a
+                      href="http://studio.zebracat.ai/signup/?via=adalberto"
+                      target="_blank"
+                      >Saber más</a
+                    >
+                  </button>
+                </div>
+
+                <hr
+                  class="h-1 md:w-[80%] md:m-auto md:mb-4 bg-[#E5E5E5] mb-4"
+                />
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <div class="md:flex md:gap-4">
+                  <div class="md:w-[50%]">
+                    <h2 class="text-xl md:text-4xl lg:mb-3 font-bold mb-3">
+                      3. Bertha
+                    </h2>
+                    <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                      Si el trabajo en equipo es lo tuyo, entonces presta
+                      atención a Bertha, una aplicación sumamente útil para el
+                      manejo de equipos y tareas. Aquí la inteligencia
+                      artificial te permite automatizar la asignación de tareas
+                      basada en las fortalezas de los miembros de tu equipo,
+                      manejar disponibilidad y plazos para cualquier proyecto, y
+                      utilizar los recursos disponibles dentro de tu
+                      marca/negocio de la mejor forma posible.
+                    </p>
+                  </div>
+                  <div class="md:w-[50%] md:h-[280px] flex justify-center">
+                    <img
+                      src="images/robot.jpg"
+                      class="h-[200px] hidden md:block lg:h-100 w-full md:h-auto object-cover"
+                      alt=""
+                    />
+
+                    <img
+                      src="images/crop/robot.png"
+                      class="h-[120px] w-full md:hidden object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                   Además, Bertha ofrece analíticas predictivas impulsadas por
+                  IA, esto te ayudará a tener cifras que te ayudarán a tomar
+                  decisiones acerca del manejo de tus distintos equipos, estas
+                  estadísticas en tiempo real te darán información valiosa sobre
+                  los plazos del proyecto, previsiones de presupuesto y riesgos
+                  potenciales, volviendo el proceso de toma de decisiones mucho
+                  más sencillo para reducir lo más posible esos cuellos de
+                  botella que llegan con cada proyecto.
+                </p>
+                <ul
+                  class="text-xs list-disc list-inside px-4 md:leading-6 md:text-base lg:text-lg"
+                >
+                  <li class="list-disc">
+                    Automatización de tareas y optimización de recursos.
+                  </li>
+                  <li>
+                    Analíticas predictivas para plazos y presupuestos del
+                    proyecto.
+                  </li>
+                  <li>Comunicación fluida con capacidades de NLP</li>
+                  <li>Productividad y eficiencia mejoradas.</li>
+                  <li>
+                    Precios: Comienzan desde 15 USD (aproximadamente 270 MXN)
+                    para hasta 10,000 palabras o 25 USD (aproximadamente 450
+                    MXN) para hasta 100 imágenes.
+                  </li>
+                </ul>
+
+                <div class="flex justify-center">
+                  <button
+                    class="cursor-pointer w-[90%] md:w-[30%] gradient-button text-white text-xl py-2 rounded-full"
+                  >
+                    <a href="https://bertha.ai/?ref=19946" target="_blank"
+                      >Saber más</a
+                    >
+                  </button>
+                </div>
+
+                <hr
+                  class="h-1 md:w-[80%] md:m-auto md:mb-4 bg-[#E5E5E5] mb-4"
+                />
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <div class="md:flex md:gap-4">
+                  <div class="md:w-[50%]">
+                    <h2 class="text-xl md:text-4xl lg:mb-3 font-bold mb-3">
+                      4. VidIQ
+                    </h2>
+                    <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                      Si el contenido más visto hoy en día es video haz que tu
+                      marca/negocio se mantenga en tendencia sin el esfuerzo de
+                      crear videos de cero, VidIQ revoluciona el marketing de
+                      videos para distintas plataformas con sus avanzadas
+                      herramientas de optimización y análisis impulsadas por
+                      inteligencia artificial. Se trata de una aplicación que te
+                      ayuda a identificar temas, comportamiento de la audiencia
+                      e incluso ideas de videos que te pueden ayudar a obtener
+                      la mayor cantidad de vistas posibles. Su herramienta de
+                      investigación de palabras clave impulsada por inteligencia
+                      artificial te sugiere palabras clave relevantes y
+                      etiquetas para mejorar el SEO de videos y atraer tráfico
+                      orgánico en YouTube, esto significa que tendrás
+                      información acerca de qué está buscando tu audiencia para
+                      entregarles el mejor video posible.
+                    </p>
+                  </div>
+                  <div class="md:w-[50%] md:h-[500px] flex justify-center">
+                    <img
+                      src="images/triangle.jpg"
+                      class="h-[200px] hidden md:block lg:h-100 w-full md:h-auto object-cover"
+                      alt=""
+                    />
+
+                    <img
+                      src="images/crop/triangle.png"
+                      class="h-[120px] w-full md:hidden object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                  El panel de análisis de VidIQ proporciona métricas de
+                  rendimiento en tiempo real como vistas, tiempo de
+                  visualización y retención de audiencia, permitiéndote refinar
+                  tu estrategia de contenido de video para obtener los mejores
+                  resultados posibles. Al aprovechar las capacidades de IA de
+                  VidIQ puedes hacer crecer más inteligentemente tu canal de
+                  YouTube, aumentar la base de suscriptores y maximizar el
+                  retorno de inversión de tus esfuerzos de marketing de video.
+                </p>
+                <ul
+                  class="text-xs list-disc list-inside px-4 md:leading-6 md:text-base lg:text-lg"
+                >
+                  <li class="list-disc">
+                    Herramientas avanzadas de optimización y análisis de video
+                    impulsadas por IA.
+                  </li>
+                  <li>
+                    Investigación de palabras clave y mejora del SEO para videos
+                    en YouTube.
+                  </li>
+                  <li>
+                    Mayor visibilidad y compromiso a través de insights
+                    impulsados por IA.
+                  </li>
+                  <li>
+                    Maximización del ROI de los esfuerzos de marketing de
+                    video..
+                  </li>
+                  <li>
+                    Precios: Comienzan desde 15 USD (aproximadamente 270 MXN)
+                    para hasta 10,000 palabras o 25 USD (aproximadamente 450
+                    MXN) para hasta 100 imágenes.
+                  </li>
+                </ul>
+
+                <div class="flex justify-center">
+                  <button
+                    class="cursor-pointer w-[90%] md:w-[30%] gradient-button text-white text-xl py-2 rounded-full"
+                  >
+                    <a href="https://vidiq.com/nativebo" target="_blank"
+                      >Saber más</a
+                    >
+                  </button>
+                </div>
+
+                <hr
+                  class="h-1 md:w-[80%] md:m-auto md:mb-4 bg-[#E5E5E5] mb-4"
+                />
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="md:flex md:gap-4">
+                  <div class="md:w-[50%]">
+                    <h2 class="text-xl md:text-4xl lg:mb-3 font-bold mb-3">
+                      5. GetGenie
+                    </h2>
+                    <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                      ¿Qué te parecería que el servicio al cliente fuese mucho
+                      más sencillo?  Con GetGenie puedes automatizar distintos
+                      aspectos del servicio al cliente con un chatbot que
+                      realmente se siente natural sin importar la duda o
+                      problema que pueda tener cualquier cliente. <br />
+                      <br />
+                      Lo mejor de utilizar GetGenie es que realmente es fácil
+                      crear un chatbot para cualquier cosa que necesites. No
+                      importa si es una duda o algún problema con un cliente,
+                      puedes en muy poco tiempo crear un chatbot para guiar a tu
+                      cliente hacia la mejor respuesta o atención.
+                    </p>
+                  </div>
+                  <div class="md:w-[50%] md:h-[400px] flex justify-center">
+                    <img
+                      src="images/human.jpg"
+                      class="h-[200px] hidden md:block lg:h-100 w-full md:h-auto object-cover"
+                      alt=""
+                    />
+
+                    <img
+                      src="images/crop/human.png"
+                      class="h-[120px] w-full md:hidden object-cover"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <p class="text-xs md:text-base lg:text-lg md:leading-6">
+                  Lo mejor de la inteligencia artificial es que constantemente y
+                  en automático está aprendiendo acerca de las interacciones con
+                  los clientes para mejorar la precisión de las respuestas y así
+                  mejorar la experiencia del usuario con el tiempo. Al
+                  automatizar tareas rutinarias de soporte al cliente, GetGenie
+                  te ayuda a reducir costos operativos, aumentar la
+                  disponibilidad del servicio y mejorar la satisfacción general
+                  del cliente. Ahora tienes una razón más para saber que puedes
+                  escalar eficientemente tu operación de soporte al cliente,
+                  manejar mayores volúmenes de consultas y enfocar los recursos
+                  humanos en problemas más complejos. Respuestas instantáneas y
+                  recomendaciones personalizadas.
+                </p>
+                <ul
+                  class="text-xs list-disc list-inside px-4 md:leading-6 md:text-base lg:text-lg"
+                >
+                  <li class="list-disc">
+                    Algoritmos de IA que aprenden continuamente para mejorar la
+                    precisión.
+                  </li>
+                  <li>
+                    Reducción de costos y aumento de la disponibilidad del
+                    servicio.
+                  </li>
+                  <li>Mejora de la satisfacción y fidelización del cliente.</li>
+                  <li>
+                    Precios: Los planes comienzan desde 9 USD al mes
+                    (aproximadamente 165 MXN).
+                  </li>
+                </ul>
+
+                <div class="flex justify-center">
+                  <button
+                    class="cursor-pointer w-[90%] md:w-[30%] gradient-button text-white text-xl py-2 rounded-full"
+                  >
+                    <a href="https://getgenie.ai?rui=2775 " target="_blank"
+                      >Saber más</a
+                    >
+                  </button>
+                </div>
+
+                <hr
+                  class="h-1 md:w-[80%] md:m-auto md:mb-4 bg-[#E5E5E5] mb-4"
+                />
+              </div>
+            </article>
+
+            <form
+              id="newsletterb"
+              class="xl:hidden shadow-xl mb-4 border gap-3 flex flex-col text-center py-6 items-center justify-center"
+            >
+              <h3
+                class="text-white gradient-button text-center text-xl p-4 w-full"
+              >
+                ¿Te gusto este top 55?
+              </h3>
+
+              <span class="text-xl font-medium"
+                >No te pierdas las mejores recomendaciones.</span
+              >
+              <span class="underline text-base">Es 100% gratis.</span>
+              <input
+                class="border p-2 w-full text-center text-lg"
+                type="email"
+                placeholder="alejandro.telles@ejemplo.com"
+                name="email"
+                id="emailInput"
+              />
+              <button
+                onclick="sendSubscribeForm('newsletterb')"
+                type="submit"
+                class="cursor-pointer w-[80%] gradient-button text-white text-xl py-2 rounded-full"
+              >
+                Suscribirme
+              </button>
+            </form>
+          </div>
+
+          <!--form fixed-->
+
+          <aside class="flex flex-col items-center">
+            <div class="hidden xl:block sticky top-[191px] w-[85%]">
+              <form
+                id="newsletter2"
+                class="shadow-xl mb-4 border gap-3 pb-10 flex flex-col text-center items-center justify-center"
+              >
+                <h3
+                  class="text-white gradient-button text-center text-xl p-4 w-full"
+                >
+                  ¿Te gusto este top 5?
+                </h3>
+
+                <span class="text-xl font-medium"
+                  >No te pierdas las mejores recomendaciones.</span
+                >
+                <span class="underline text-base">Es 100% gratis.</span>
+                <input
+                  class="border p-2 w-full text-center text-lg"
+                  type="text"
+                  placeholder="alejandro.telles@ejemplo.com"
+                  name="email"
+                  id="emailInput"
+                />
+                <button
+                  onclick="sendSubscribeForm('newsletter2')"
+                  type="submit"
+                  class="cursor-pointer w-[80%] gradient-button text-white text-xl py-2 rounded-full"
+                >
+                  Suscribirme
+                </button>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <!--Modal terms-->
+    <section
+      id="terms"
+      class="bg-gray-100 font-[Inter] flex items-center justify-center min-h-screen absolute z-50 hidden"
+    >
+      <div
+        class="fixed inset-0 w-full bg-primary bg-opacity-50 flex items-center justify-center max-h-screen"
+      >
+        <div
+          class="custom-bg shadow-lg w-11/12 sm:w-8/12 lg:max-w-[600px] h-auto max-h-54 rounded-md"
+        >
+          <div class="relative flex items-end">
+            <img
+              class="hover:cursor-pointer absolute top-0 right-0 w-6 md:w-7 m-4 rounded-xs"
+              onclick="clickModal('terms')"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjRUZFRkVGIiBkPSJNMTkgM0g1YTIgMiAwIDAgMC0yIDJ2MTRhMiAyIDAgMCAwIDIgMmgxNGEyIDIgMCAwIDAgMi0yVjVhMiAyIDAgMCAwLTItMm0tMy40IDE0TDEyIDEzLjRMOC40IDE3TDcgMTUuNmwzLjYtMy42TDcgOC40TDguNCA3bDMuNiAzLjZMMTUuNiA3TDE3IDguNEwxMy40IDEybDMuNiAzLjZ6Ii8+PC9zdmc+"
+              alt=""
+            />
+            <div class="bg-primary w-full">
+              <h2
+                class="text-lg md:text-xl text-center p-4 font-bold text-white w-full"
+              >
+                Términos y condiciones
+              </h2>
+            </div>
+          </div>
+          <article
+            class="text-white overflow-y-auto overflow-x-hidden h-96 p-5 text-xs flex flex-col gap-2"
+          >
+            <div class="flex flex-col gap-2">
+              <span class="text-sm text-center font-light text-white"
+                >Al acceder y utilizar este sitio, aceptas cumplir con estos
+                términos y condiciones en su totalidad.</span
+              >
+              <p class="font-light"></p>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 font-light px-4 md:px-10 [&>ul>li]:text-sm [&>ul>li]:font-medium leading-5"
+            >
+              <span class="text-lg font-semibold"></span>
+              <ul class="list-decimal ml-5">
+                <li>Uso del Sitio Web</li>
+                <p>
+                  El contenido de las páginas de este sitio web es únicamente
+                  referencial, incluye opiniones que pueden no ser
+                  necesariamente las mismas que la de los usuarios.
+                </p>
+                <li>Enlaces Afiliados</li>
+                <p>
+                  Este sitio web puede incluir enlaces a productos o servicios
+                  de terceros a través de enlaces de afiliados. Estos enlaces
+                  son proporcionados directamente por las marcas/sitios
+                  involucrados. No vendemos directamente ningún producto o
+                  servicio a través de nuestro sitio web. Si decides realizar
+                  una compra a través de estos enlaces, serás dirigido al sitio
+                  web del vendedor y se aplicarán sus términos y condiciones.
+                </p>
+                <li>Propiedad Intelectual</li>
+                <p>
+                  El contenido, diseño y gráficos de este sitio web están
+                  protegidos por derechos de autor y otras leyes de propiedad
+                  intelectual. Queda prohibida la reproducción total o parcial
+                  del contenido, salvo acuerdo expreso por escrito de los
+                  propietarios del sitio.
+                </p>
+                <li>Limitación de Responsabilidad</li>
+                <p>
+                  <span class="dyn-name"></span> no se hace responsable de
+                  ninguna pérdida o daño directo, indirecto, incidental,
+                  especial, consecuente o ejemplar que surja del uso o la
+                  imposibilidad de uso de este sitio web o de cualquier
+                  información o servicio proporcionado a través de este sitio
+                  web.
+                </p>
+                <li>Modificaciones</li>
+                <p>
+                  <span class="dyn-name"></span> se reserva el derecho de
+                  modificar estos términos y condiciones en cualquier momento.
+                  Los cambios entrarán en vigencia desde el momento de su
+                  publicación en este sitio web.
+                </p>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--Modal privacy-->
+    <section
+      id="privacy"
+      class="bg-gray-100 font-[Inter] flex items-center justify-center min-h-screen absolute z-50 hidden"
+    >
+      <div
+        class="fixed inset-0 w-full bg-primary bg-opacity-50 flex items-center justify-center max-h-screen"
+      >
+        <div
+          class="custom-bg shadow-lg w-11/12 sm:w-8/12 lg:max-w-[600px] h-auto max-h-54 rounded-md"
+        >
+          <div class="relative flex items-end">
+            <img
+              class="hover:cursor-pointer absolute top-0 right-0 w-6 md:w-7 m-4 rounded-xs"
+              onclick="clickModal('privacy')"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjRUZFRkVGIiBkPSJNMTkgM0g1YTIgMiAwIDAgMC0yIDJ2MTRhMiAyIDAgMCAwIDIgMmgxNGEyIDIgMCAwIDAgMi0yVjVhMiAyIDAgMCAwLTItMm0tMy40IDE0TDEyIDEzLjRMOC40IDE3TDcgMTUuNmwzLjYtMy42TDcgOC40TDguNCA3bDMuNiAzLjZMMTUuNiA3TDE3IDguNEwxMy40IDEybDMuNiAzLjZ6Ii8+PC9zdmc+"
+              alt=""
+            />
+            <div class="bg-primary w-full">
+              <h2
+                class="text-lg md:text-xl text-center p-4 font-bold text-white w-full"
+              >
+                Política de Privacidad
+              </h2>
+            </div>
+          </div>
+          <article
+            class="text-white overflow-y-auto overflow-x-hidden h-96 p-5 text-xs flex flex-col gap-2"
+          >
+            <div class="flex flex-col gap-2">
+              <span class="text-sm text-center font-light text-white">
+                En <span class="dyn-name"></span>, respetamos y protegemos la
+                privacidad de nuestros usuarios. Esta Política de Privacidad
+                establece los términos en que
+                <span class="dyn-name"></span> utiliza y protege la información
+                que es proporcionada por sus usuarios al momento de utilizar
+                nuestro sitio web. Nuestra empresa está comprometida con la
+                seguridad de los datos de sus usuarios. Cuando le solicitamos
+                llenar los campos de información personal con los cuales usted
+                pueda ser identificado, lo hacemos asegurando que solo se
+                empleará de acuerdo con los términos de este documento.
+              </span>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 font-light px-4 md:px-10 [&>ul>li]:text-sm [&>ul>li]:font-medium leading-5"
+            >
+              <ul class="list-decimal ml-5">
+                <li>Información que Recopilamos</li>
+                <p>
+                  La única información personal que recopilamos de manera
+                  voluntaria es su dirección de correo electrónico cuando se
+                  suscribe a nuestro boletín informativo (newsletter).
+                </p>
+                <li>Uso de la Información</li>
+                <p>
+                  Usamos su dirección de correo electrónico exclusivamente para
+                  enviarle nuestro boletín informativo, que puede incluir
+                  actualizaciones sobre nuevos artículos, recomendaciones de
+                  herramientas, promociones y otra información relevante para
+                  nuestros lectores.
+                </p>
+                <li>Protección de la Información</li>
+                <p>
+                  <span class="dyn-name"></span> garantiza la seguridad absoluta
+                  de su información personal. Utilizamos medidas de seguridad
+                  adecuadas para proteger su dirección de correo electrónico
+                  contra el acceso no autorizado, la divulgación o la
+                  destrucción.
+                </p>
+                <li>Compartir la Información</li>
+                <p>
+                  Nos comprometemos a no vender, distribuir o ceder su
+                  información personal a terceros sin su consentimiento, salvo
+                  que sea requerido por un juez con una orden judicial.
+                </p>
+                <li>Derechos del Usuario</li>
+                <p>
+                  Usted tiene el derecho de acceder, rectificar, cancelar u
+                  oponerse al uso de su información personal. Para cancelar su
+                  suscripción al boletín informativo, simplemente haga clic en
+                  el enlace de "cancelar suscripción" que se incluye en cada uno
+                  de los correos electrónicos que enviamos.
+                </p>
+                <li>Cambios en la Política de Privacidad</li>
+                <p>
+                  Si <span class="dyn-name"></span> decide modificar esta
+                  política de privacidad, se notificará a través de un aviso en
+                  nuestro sitio web y mediante correo electrónico a correo@<span
+                    class="dyn-name"
+                  ></span
+                  >.
+                </p>
+                <li>Contacto</li>
+                <p>
+                  Si tiene alguna pregunta o inquietud acerca de nuestra
+                  política de privacidad, no dude en contactarnos a través de
+                  correo@<span class="dyn-name"></span>.
+                </p>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modalbg" class="modalbg hidden"></section>
+
+    <footer class="flex flex-col items-center">
+      <div
+        class="custom-bg flex flex-col items-center gap-5 text-white p-8 w-[300px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:[1280px] 2xl:w-[1400px]"
+      >
+        <div class="flex justify-center items-center gap-2">
+          <img src="images/logo.png.png" class="w-8" alt="" />
+          <h1 class="dyn-name font-bold text-base"></h1>
+        </div>
+
+        <div
+          class="flex flex-col xl:flex-row xl:gap-14 justify-center gap-2 underline"
+        >
+          <span onclick="clickModal('terms')">Términos y condiciones</span>
+          <span onclick="clickModal('privacy')">Políticas de privacidad</span>
+        </div>
+        <p class="text-xs font-extralight xl:w-[60%]">
+          La información proporcionada en este blog es solo para fines
+          informativos generales. Si bien nos esforzamos por mantener la
+          información actualizada y correcta, no hacemos representaciones ni
+          garantías de ningún tipo, expresas o implícitas, sobre la integridad,
+          exactitud, confiabilidad, idoneidad o disponibilidad con respecto a la
+          información, productos, servicios o gráficos relacionados contenidos
+          en el blog para cualquier propósito. <br /><br />
+          Las reseñas y recomendaciones proporcionadas se basan en opiniones y
+          experiencias personales y pueden no reflejar necesariamente las
+          opiniones de todos los usuarios. <br /><br />
+          Los enlaces en el presente blog son proporcionados directamente por
+          las marcas/sitios involucrados. Sin embargo, aconsejamos que realice
+          su propia investigación y diligencia debida antes de tomar cualquier
+          decisión basada en la información proporcionada en este blog. Por
+          favor, visite los sitios web oficiales de las herramientas revisadas y
+          verifique la información antes de tomar cualquier decisión. Utilice la
+          información bajo su propio riesgo, y no seremos responsables de
+          ninguna pérdida o daño en relación con el uso de las
+          aplicaciones/sitios mencionadas(os) en el presente blog.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
